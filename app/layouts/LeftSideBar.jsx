@@ -1,12 +1,17 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Main from "./Main";
-import { UserButton } from "@clerk/nextjs";
-
+import Main from "./Menu";
+import { SignedIn, SignOutButton, UserButton } from "@clerk/nextjs";
+import { Logout } from "@mui/icons-material";
+import Menu from "./Menu";
+import { dark } from "@clerk/themes";
+import '../(root)/styles/globals.css'
 const LeftSideBar = () => {
+  const isLoggedin = true;
   return (
-    <div className=" bg-black h-screen left-0 top-0 sticky overflow-auto px-10 py-6 flex flex-col gap-6 max-md:hidden custom-scrollbar">
+    <div className="h-screen left-0 top-0 sticky overflow-auto px-10 py-6 flex flex-col gap-6 max-md:hidden 2xl:w-[350px] custom-scrollbar">
       <Link href="/">
         <Image src="/assets/logo.png" alt="hi" width={100} height={100} />
       </Link>
@@ -38,12 +43,20 @@ const LeftSideBar = () => {
           </div>
         </div>
         <hr />
-        <Main />
+        <Menu />
         <hr />
         <div className="flex gap-4 items-center">
-          <UserButton afterSignOutUrl="/sign-in"/>
+          <UserButton afterSignOutUrl="/sign-in" />
           <p className="text-white text-body-bold">Manage account</p>
         </div>
+        <SignedIn className="bg-white">
+          <SignOutButton>
+            <div className="flex cursor-pointer gap-4">
+              <Logout sx={{ color: "white", fontSize: "32px" }} />
+              <p className="text-body-bold text-light-1">Log Out</p>
+            </div>
+          </SignOutButton>
+        </SignedIn>
       </div>
     </div>
   );

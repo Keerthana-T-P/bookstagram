@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clerk Auth forms */
+.cl-formButtonPrimary {
+    background-color: #6a0dad; /* Equivalent to bg-purple-1 */
+  }
+  
+  .cl-formButtonPrimary:hover {
+    background-color: #ff69b4; /* Equivalent to bg-pink-1 */
+  }
+  
+  .cl-footerActionLink {
+    color: #6a0dad; /* Equivalent to text-purple-1 */
+  }
+  
+  .cl-footerActionLink:hover {
+    color: #ff69b4; /* Equivalent to text-pink-1 */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+  
+  /* Profile Info */
+  .input {
+    background-color: #2c2c2c; /* Equivalent to bg-dark-1 */
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 12px;
+    color: #f0f0f0; /* Equivalent to text-light-1 */
+    outline: none;
+  }
+  
+  /* Top Bar */
+  .search-bar {
+    width: 100%;
+    background-color: #3c3c3c; /* Equivalent to bg-dark-2 */
+    padding: 12px 20px;
+    border-radius: 8px;
+    outline: none;
+    color: #f0f0f0; /* Equivalent to text-light-1 */
+    font-weight: 600;
+    font-size: 0.875rem; /* Equivalent to text-small-semibold */
+  }
+  
+  .create-post-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: linear-gradient(to left, #ff69b4, #6a0dad); /* Equivalent to bg-gradient-to-l from-pink-1 to-purple-1 */
+    color: #f0f0f0; /* Equivalent to text-light-1 */
+    font-weight: 600;
+    font-size: 0.875rem; /* Equivalent to text-small-semibold */
+  }
+  
+  @media (max-width: 767px) {
+    .create-post-btn {
+      display: none; /* Equivalent to max-md:hidden */
+    }
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #f0f0f0; /* Equivalent to text-light-1 */
+    cursor: pointer;
+  }
+  
+  .search-icon:hover {
+    color: #ff69b4; /* Equivalent to hover:text-pink-1 */
+  }
+  
+  /* Tabs */
+  .tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #f0f0f0; /* Equivalent to text-light-1 */
+    font-weight: 700; /* Equivalent to text-small-bold */
+  }
+  

@@ -3,7 +3,7 @@ import React from 'react'
 import { sidebarLinks } from '@app/constants'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-const Main = () => {
+const Menu = () => {
 const path=usePathname()
   return (
     <div>
@@ -21,4 +21,4 @@ const path=usePathname()
   )
 }
 
-export default Main
+export default Menu
